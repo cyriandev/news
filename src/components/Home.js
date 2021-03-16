@@ -8,13 +8,15 @@ const Home = () => {
 
     useEffect(() => {
         getNews();
+
+        // eslint-disable-next-line 
     }, [])
 
 
 
     return (
         <>
-            {loading ? <div className="d-flex justify-content-center"><div class="spinner"></div></div> :
+            {loading ? <div className="d-flex justify-content-center"><div className="spinner"></div></div> :
                 news.map((item, index) =>
                     <NewsItem key={index} item={item} />
                 )

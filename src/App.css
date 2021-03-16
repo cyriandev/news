@@ -74,4 +74,24 @@ input[type=number]:focus,
 .stick{
   position: sticky;
   top: 20px;
+  /* background-color: #eeeeee; */
+  border-radius: 5px;
+}
+ion-icon {
+  color: #000;
+  font-size: 20px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .stick {
+    display: none;
+  }
+}
+
+.heading{
+  padding: .5rem 1rem;
+}
+.malink{
+  font-size: 13px;
 }

@@ -11,10 +11,11 @@ const Topic = () => {
 
     useEffect(() => {
         getTopics(topic);
+        // eslint-disable-next-line
     }, [topic])
     return (
         <div>
-            {topic_loading ? <div className="d-flex justify-content-center"><div class="spinner"></div></div> :
+            {topic_loading ? <div className="d-flex justify-content-center"><div className="spinner"></div></div> :
                 topic_news.map((item, index) =>
                     <NewsItem key={index} item={item} />
                 )

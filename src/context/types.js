@@ -1,7 +1,13 @@
 export const NEWS_LOADING = "SET_LOADING";
 export const TOPIC_NEWS_LOADING = "TOPIC_NEWS_LOADING";
+export const SEARCH_LOADING = "SEARCH_LOADING";
+export const SOURCE_LOADING = "SOURCE_LOADING";
 export const GET_NEWS = "GET_NEWS";
+export const GET_RESULTS = "GET_RESULTS";
 export const GET_TOPIC_NEWS = "GET_TOPIC_NEWS";
+export const GET_SOURCES = "GET_SOURCES";
 export const NEWS_ERROR = "NEWS_ERROR";
+export const SOURCE_ERROR = "SOURCE_ERROR";
+export const SEARCH_ERROR = "SEARCH_ERROR";
 export const TOPIC_NEWS_ERROR = "TOPIC_NEWS_ERROR";
 export const CLEAR_ERRORS = "CLEAR_ERRORS";

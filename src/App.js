@@ -1,8 +1,11 @@
 import React from 'react';
 import './App.css';
 import NewsState from './context/news/NewsState';
-import Home from './components/Home'
-import Topic from './components/Topic'
+import Home from './components/Home';
+import Topic from './components/Topic';
+import Search from './components/Search';
+import Header from './components/Header';
+import Sources from './components/Sources';
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,16 +19,34 @@ function App() {
 
       <Router>
 
+        <Header />
 
-        <nav className="navbar navbar-light bg-light">
-          <div className="container">
-            <a className="navbar-brand">News</a>
-            <form className="d-flex">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            </form>
-          </div>
-        </nav>
+        <div className="container mt-3">
+          <ul class="nav">
+            <li class="nav-item">
+              <Link className="nav-link" to="/">General</Link>
+            </li>
+            <li class="nav-item">
+              <Link className="nav-link" to="/topic/business">Business</Link>
+            </li>
+            <li class="nav-item">
+              <Link className="nav-link" to="/topic/entertainment">Entertainment</Link>
+            </li>
+            <li class="nav-item">
+              <Link className="nav-link" to="/topic/health">Health</Link>
+            </li>
+            <li class="nav-item">
+              <Link className="nav-link" to="/topic/science">Science</Link>
+            </li>
+            <li class="nav-item">
+              <Link className="nav-link" to="/topic/sports">Sports</Link>
+            </li>
+            <li class="nav-item">
+              <Link className="nav-link" to="/topic/technology">Technology</Link>
+            </li>
 
+          </ul>
+        </div>
 
         <div className="container mt-5">
 
@@ -38,40 +59,16 @@ function App() {
                 <Route path="/topic/:topic">
                   <Topic />
                 </Route>
+                <Route path="/search">
+                  <Search />
+                </Route>
               </Switch>
             </div>
 
 
 
 
-            <div className="col-md-4" style={{ position: 'relative' }}>
-              <ul className="nav flex-column stick">
-                <li className="nav-item">
-                  <Link className="nav-link active" to="/">Top stories</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/topic/general">General</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/topic/business">Business</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/topic/entertainment">Entertainment</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/topic/health">Health</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/topic/science">Science</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/topic/sports">Sports</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/topic/technology">Technology</Link>
-                </li>
-              </ul>
-            </div>
+            <Sources />
 
 
           </div>
