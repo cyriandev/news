@@ -55,7 +55,7 @@ const NewsState = ({ children }) => {
 
         setNewsLoading();
         try {
-            const res = await axios.get(`https://newsapi.org/v2/top-headlines?country=za&apiKey=29d594ac0cdb45f5a510d0abb7b0b1f2`);
+            const res = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=29d594ac0cdb45f5a510d0abb7b0b1f2`);
 
             dispatch({
                 type: GET_NEWS,
@@ -75,7 +75,7 @@ const NewsState = ({ children }) => {
 
         setTopicLoading();
         try {
-            const res = await axios.get(`https://newsapi.org/v2/top-headlines?country=za&category=${topic}&apiKey=29d594ac0cdb45f5a510d0abb7b0b1f2`);
+            const res = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=${topic}&apiKey=29d594ac0cdb45f5a510d0abb7b0b1f2`);
             dispatch({
                 type: GET_TOPIC_NEWS,
                 payload: res.data.articles
@@ -113,8 +113,7 @@ const NewsState = ({ children }) => {
 
         setSourceLoading();
         try {
-            const res = await axios.get(`https://newsapi.org/v2/sources?country=za&apiKey=29d594ac0cdb45f5a510d0abb7b0b1f2`);
-            console.log(res.data);
+            const res = await axios.get(`https://newsapi.org/v2/sources?country=us&apiKey=29d594ac0cdb45f5a510d0abb7b0b1f2`);
             dispatch({
                 type: GET_SOURCES,
                 payload: res.data.sources

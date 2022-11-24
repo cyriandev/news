@@ -22,26 +22,26 @@ function App() {
         <Header />
 
         <div className="container mt-3">
-          <ul class="nav">
-            <li class="nav-item">
+          <ul className="nav sub-nav">
+            <li className="nav-item">
               <Link className="nav-link" to="/">General</Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link className="nav-link" to="/topic/business">Business</Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link className="nav-link" to="/topic/entertainment">Entertainment</Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link className="nav-link" to="/topic/health">Health</Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link className="nav-link" to="/topic/science">Science</Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link className="nav-link" to="/topic/sports">Sports</Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link className="nav-link" to="/topic/technology">Technology</Link>
             </li>
 
@@ -64,13 +64,7 @@ function App() {
                 </Route>
               </Switch>
             </div>
-
-
-
-
             <Sources />
-
-
           </div>
         </div>
       </Router>
